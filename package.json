@@ -1,14 +1,21 @@
 {
-  "name": "Homework03",
+  "name": "homework03",
   "version": "1.0.0",
-  "description": "Node js Homework",
+  "description": "Node js homework",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Andrey Alfaro <andreyalfaro@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majosm96/homework03.git"
+  },
+  "author": "Maria Jose Solis <majosm96@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majosm96/homework03/issues"
+  },
+  "homepage": "https://github.com/majosm96/homework03#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
