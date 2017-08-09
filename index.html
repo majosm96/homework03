@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="opacity" id="opacity"></div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Nunito:300,300i,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="node_modules/fullcalendar/dist/fullcalendar.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link href='../fullcalendar.print.min.css' rel='stylesheet' media='print' /> -->
+  <!--[if lt IE 9]>
+    <script type="text/javascript">
+      var arr=['article','aside','footer','header','nav','section','figcaption','figure','main','template'];
+      for(var i=0;i<arr.length;i++) document.createElement(arr[i]);
+    </script>
+    <![endif]-->
+  <meta name="description" content="">
+</head>
+
+<body>
+  <div id="calendar"></div>
+
+  <div id="createEventModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+    <!-- modal header -->
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3 id="myModalLabel1">Create Appointment</h3>
+    </div>
+      <!-- modal body -->
+    <div class="modal-body">
+
+    <form id="createAppointmentForm" class="form-horizontal">
+        <!-- Pacient name -->
+        <div class="control-group">
+            <label class="control-label" for="patientName">Patient:</label>
+            <div class="controls">
+                <input type="text" name="patientName" id="patientName" tyle="margin: 0 auto;">
+            </div>
+        </div>
+          <!-- Pacient ID -->
+        <div class="control-group">
+            <label class="control-label" for="patientId">Id number:</label>
+            <div class="controls controls-row" style="margin-top:5px;">
+              <input type="number" name="patientName" id="patientId" tyle="margin: 0 auto;">
+            </div>
+        </div>
+          <!-- Departament-->
+        <div class="control-group">
+            <label class="control-label" for="departament">Departament:</label>
+            <div class="controls controls-row" style="margin-top:5px;">
+              <select id="departament">
+                <option value="cardiology">Cardiology</option>
+                <option value="gastro">Gastroenterology</option>
+                <option value="general">General Iternal Medice</option>
+                <option value="primary">Primary Care</option>
+              </select>
+            </div>
+        </div>
+          <!-- Time-->
+        <div class="control-group">
+            <label class="control-label" for="when">When:</label>
+            <div class="controls controls-row" style="margin-top:5px;">
+              <select id="when" tyle="margin: 0 auto;">
+                <option value="9">9 am</option>
+                <option value="10">10 am</option>
+                <option value="11">11 am</option>
+                <option value="12">12 md</option>
+                <option value="1">1 pm</option>
+                <option value="2">2 pm</option>
+                <option value="3">3 pm</option>
+                <option value="4">4 pm</option>
+                <option value="5">5 pm</option>
+                <option value="6">6 pm</option>
+              </select>
+            </div>
+        </div>
+
+    </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true" id="cancelButton">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="submitButton">Save</button>
+    </div>
+</div>
+  <!-- Scripts -->
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="node_modules/moment/min/moment.min.js"></script>
+  <script src="node_modules/fullcalendar/dist/fullcalendar.min.js"></script>
+  <script src="main-test.js"></script>
+</body>
+
+</html>
